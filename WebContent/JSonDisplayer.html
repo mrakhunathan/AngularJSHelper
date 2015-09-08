@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>1st One</title>
+</head>
+<body>
+	<script src="angular.min.js"></script>
+	<script src="JsonSupplier.js"></script>
+	<script>
+		var m2 = angular.module('myJSonReader', []).controller("jsonGetter",
+				function($scope) {
+					$scope.dataHolder = getMeAJson();
+					console.log($scope.dataHolder);
+				});
+	</script>
+
+
+	<div ng-app="myJSonReader" ng-controller="jsonGetter">
+			<table ng-repeat="i in dataHolder" border=2>
+			<tr>
+			<td>{{ i.PCName }}</td>
+			<td>{{ i.SystemID }}</td>
+			</tr>
+			</table>
+	</div>
+</body>
+</html>
