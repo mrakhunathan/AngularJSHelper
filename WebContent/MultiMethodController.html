@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Displaying into Views</title>
+</head>
+<body ng-app="ViewerApp1" ng-controller="XController" ng-view="One">
+<script src="angular.min.js"></script>
+<script>
+	var thisVar = angular.module('ViewerApp1',[]);
+	
+	thisVar.controller("XController",function($scope)
+			{
+				alert("1");
+				console.log("1");
+				hello($scope);	
+			},
+			hello = function($scope)
+			{
+				console.log("2");
+				method2();
+			},
+			method2 = function($scope)
+			{
+				console.log("Method 2");
+				method3($scope);
+			},
+			method3 = function($scope)
+			{
+				console.log("Method 3");
+			}
+		);
+</script>
+</body>
+</html>

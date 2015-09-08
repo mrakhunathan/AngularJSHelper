@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Trial Controller</title>
+</head>
+<body ng-app="App2" ng-controller="MyController2">
+	Inside Body..
+	<script src="angular.min.js"></script>
+
+	<script>
+		var thisApplication = angular.module('App2', []);
+		
+		thisApplication.controller("MyController1", function($scope)
+				{
+					console.log("Inside Controller 1");
+					console.log($scope);
+				}
+		);
+		
+		thisApplication.controller("MyController2", function($scope)
+				{
+					console.log("Inside Controller 2");
+					$scope.dateNow = Date();
+					alert($scope.dateNow);
+					console.log($scope);
+				}
+		);
+		
+		thisApplication.controller("MyController3", function()
+				{
+					console.log("Inside Controller 3");
+				}
+		);
+		
+	</script>
+</body>
+</html>
