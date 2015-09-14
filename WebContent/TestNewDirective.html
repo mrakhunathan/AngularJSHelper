@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Custom Directives</title>
+</head>
+<body>
+	<script src="scripts/angular.min.js"></script>
+
+	<div ng-app="testDirective" ng-controller="testDirectiveController"
+		test-Directive>{{Hello}};</div>
+
+	<script>
+		var angularApp = angular.module('testDirective', []);
+
+		angularApp.controller('testDirectiveController', [ '$scope',
+				function($scope) {
+					$scope.customer = {
+						name : 'MyName',
+						address : 'MyAddress'
+					};
+				}]);
+		angularApp
+				.directive(
+						'testDirective',
+						function() {
+							return {
+								template : 'Name: {{customer.name}} <br> Address: {{customer.address}}'
+							};
+						});
+	</script>
+</body>
+</html>

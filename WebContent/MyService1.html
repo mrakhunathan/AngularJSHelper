@@ -5,30 +5,27 @@
 <title>My First Service</title>
 </head>
 <body ng-app="MyServices" ng-controller="MyServiceController">
-	
+
 	<script src="scripts/angular.min.js"></script>
 	<script>
-		var serviceModule = angular.module('MyServices',[]);
+		var serviceModule = angular.module('MyServices', []);
 
-		serviceModule.controller("MyServiceController",function()
-		{
-			console.log("Service Controller Invoked..");
-			WaterService.callMe();
+		serviceModule.service('motoService', function() {
+			this.myFunc1 = function() {
+				console.log("From myFunc1...");
+			};
+			this.myFunc2 = function() {
+				console.log("From myFunc2...");
+			};
 		});
-		
-		serviceModule.service("WaterService", function() 
-		{
-			console.log("From Water Service");
-		},
-		
-		callMe = function()
-		{
-			console.log("From Call Me Function");
-		}
-		); 
-		
-	</script>
-    
 
+		serviceModule.controller('MyServiceController', [ '$scope',
+				'motoService', function($scope, motoService) {
+					console.log("Service Controller Invoked..");
+
+					motoService.myFunc1();
+					motoService.myFunc2();
+				} ]);
+	</script>
 </body>
 </html>

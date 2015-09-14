@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="scripts/angular.min.js"></script>
+	<div ng-app="UploadFile" ng-controller="fileUploadController">
+		<input type="file" ng-model = "selectedFile">
+		console.log
+	</div>
+	<script>
+		var fileUpload = angular.module('UploadFile', []);
+		fileUpload.controller('fileUploadController', function() 
+		{	
+			
+		});
+	</script>
+</body>
+</html>
