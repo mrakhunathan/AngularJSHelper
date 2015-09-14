@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My First Service</title>
+</head>
+<body ng-app="MyServices" ng-controller="MyServiceController">
+	
+	<script src="scripts/angular.min.js"></script>
+	<script>
+		var serviceModule = angular.module('MyServices',[]);
+
+		serviceModule.controller("MyServiceController",function()
+		{
+			console.log("Service Controller Invoked..");
+			WaterService.callMe();
+		});
+		
+		serviceModule.service("WaterService", function() 
+		{
+			console.log("From Water Service");
+		},
+		
+		callMe = function()
+		{
+			console.log("From Call Me Function");
+		}
+		); 
+		
+	</script>
+    
+
+</body>
+</html>

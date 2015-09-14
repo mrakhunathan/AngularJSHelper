@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Injecting Modules</title>
+</head>
+<body ng-app="FirstModule" ng-controller="FirstController">
+Use Ctrl + F12 and look for output in Console
+	<script src="scripts/angular.min.js"></script>
+	<script>
+		var Module1 = angular.module('FirstModule',['SecondModule']); //Second Module Injected to FirstModule
+		Module1.controller("FirstController",function()
+				{
+					console.log("From Module1.FirstController...");
+					hello();
+				});
+		
+		var Module2=angular.module('SecondModule',[]);
+		Module2.controller("SecondController",function()
+				{
+					console.log("From Module2.SecondController...");
+				},
+				hello = function()
+				{
+					console.log("From Hello Method Of 2nd Module...");
+				}
+		);		
+	</script>
+</body>
+</html>
