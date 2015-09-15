@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- http-equiv="refresh" content="3" -->
+<meta charset="ISO-8859-1" >
+<title>Math Service Index</title>
+</head>
+<body>
+	<div ng-app="MathApplication" ng-controller="mathController">
+
+		<script src="../scripts/angular.min.js"></script>
+		<script src="../factory/MathFactory/app.js"></script>
+		<script src="../factory/MathFactory/math.js"></script>
+
+		Value 1 = <input type="number" ng-model="Value1"> <br>
+		Value 2 = <input type="number" ng-model="Value2"> <br>
+		
+		<button ng-click='Calculate()'>Calculate</button>
+		<br><br><br><br>
+		Sum = 	<input type="text" ng-model = "addResult"><br>
+		Subracted = <input type="text" ng-model = "subResult"><br>
+		Multiplied = <input type="text" ng-model = "multiplyResult"><br>
+		Divided = <input type="text" ng-model = "divisionResult"><br>
+		Modulo = <input type="text" ng-model = "moduloResult"><br>
+		
+	</div>
+</body>
+</html>
