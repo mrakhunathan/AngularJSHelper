@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="scripts/angular.js"></script>
+<script src="scripts/myscript.js"></script>
+</head>
+<body ng-app="changeEvents" ng-controller="chageController">
+
+	Enter Some Text
+	<input type="text" ng-model="tfld" ng-change="tfChange()">
+	<br> Check 1
+	<input type="checkbox" ng-model="Chk1" ng-change="checkBoxChanged()">
+	<br> Check 2
+	<input type="checkbox" ng-model="Chk2" ng-change="checkBoxChanged()">
+	<br>
+	
+	Checkbox1 = {{Checkbox1 }}
+	<br>
+	Checkbox2 = {{Checkbox2 }}
+</body>
+</html>

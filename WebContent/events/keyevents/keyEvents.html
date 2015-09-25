@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="scripts/angular.js"></script>
+<script src="scripts/myscript.js"></script>
+</head>
+<body ng-app="keyEvents" ng-controller="keyController">
+
+Enter Some Text<input type="text"   
+			 ng-keydown="onKeyDown($event)"
+             ng-keypress="onKeyPress($event)"
+             ng-keyup="onKeyUp($event)">
+</body>
+</html>

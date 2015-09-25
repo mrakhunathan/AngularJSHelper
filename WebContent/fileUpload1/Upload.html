@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="../scripts/angular.min.js"></script>
+	<script src="scripts/fileuploader.js"></script>
+	<div ng-app="fileUploaderModule" ng-controller="fileController">
+		<input type="file" file-model="myFile" />
+		<button ng-click="uploadFile()">Upload</button><br>
+		{{ message }}
+	</div>
+</body>
+</html>

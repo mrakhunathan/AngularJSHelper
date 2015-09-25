@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="scripts/angular.js"></script>
+<script src="scripts/myscript.js"></script>
+</head>
+<body ng-app="mouseEvents" ng-controller="mouseController">
+
+	<img src="images/cube1_preview_featured.jpg" 
+		ng-click="onClick($event)"
+		ng-dblclick="onDoubleClick($event)"
+		ng-mousedown="onMouseDown($event)" 
+		ng-mouseup="onMouseUp($event)"
+		ng-mouseenter="onMouseEnter($event)"
+		ng-mouseleave="onMouseLeave($event)"
+		ng-mousemove="onMouseMove($event)" 
+		ng-mouseover="onMouseOver($event)">
+</body>
+</html>
+
