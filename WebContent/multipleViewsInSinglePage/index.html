@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="moduleOne">
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/angular-route.min.js"></script>
+	<script src="scripts/script.js"></script>
+	From Div 1
+	<div  ng-controller="controllerOne">
+		Uname : <input type="text" ng-model="textField1"> Name : <input
+			type="text" ng-model="textField2">
+		<button ng-click="clickedSubmit()">Click</button>
+		<br>
+		<br> Value in TF1 = {{tfOne}} <br> Value in TF2 = {{tfTwo}}
+		<ng-view> </ng-view>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br> From Div 2
+	<div ng-controller="controllerTwo">
+		Uname : <input type="text" ng-model="textField3"> Name : <input
+			type="text" ng-model="textField4">
+		<button ng-click="clickedSubmit()">Click</button>
+		<br>
+		<br> Value in TF3 = {{tfThree}} <br> Value in TF4 =
+		{{tfFour}}
+		<ng-view> </ng-view>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br> From Div 3
+	<div 	ng-controller="controllerThree">
+		Uname : <input type="text" ng-model="textField5"> Name : <input
+			type="text" ng-model="textField6">
+		<button ng-click="clickedSubmit()">Click</button>
+		<br>
+		<br> Value in TF5 = {{tfFive}} <br> Value in TF6 = {{tfSix}}
+		<ng-view> </ng-view>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+</html>
